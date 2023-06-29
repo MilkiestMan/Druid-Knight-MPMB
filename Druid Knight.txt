@@ -1,0 +1,71 @@
+AddSubClass( 
+
+	"fighter", 
+
+	"DruidicKnight", 
+	
+	{
+	
+		regExpSearch : /^(?=.*Druidic)(?=.*Knight).*$/i, //Regular expression of what to look for.
+		subname : "Druidic Knight",
+		source : ["HB", 0],
+		abilitySave : 5,
+	spellcastingFactor : 3,
+	spellcastingList : {
+			"class" : "druid",
+			school : ["Evoc", "Abjur"],
+			level : [0, 4]
+		},
+		
+		features : { 
+		
+		"subclassfeature3" : {
+			name : "Spellcasting",
+			source : ["HB", 0],
+			minlevel : 3,
+			description : "\n   " + "I can cast known druid cantrips/spells, using Wisdom as my spellcasting ability",
+			additional : ["", "", "2 cantrips \u0026 3 spells known", "2 cantrips \u0026 4 spells known", "2 cantrips \u0026 4 spells known", "2 cantrips \u0026 4 spells known", "2 cantrips \u0026 5 spells known", "2 cantrips \u0026 6 spells known", "2 cantrips \u0026 6 spells known", "3 cantrips \u0026 7 spells known", "3 cantrips \u0026 8 spells known", "3 cantrips \u0026 8 spells known", "3 cantrips \u0026 9 spells known", "3 cantrips \u0026 10 spells known", "3 cantrips \u0026 10 spells known", "3 cantrips \u0026 11 spells known", "3 cantrips \u0026 11 spells known", "3 cantrips \u0026 11 spells known", "3 cantrips \u0026 12 spells known", "3 cantrips \u0026 13 spells known"],
+			spellcastingBonus : { // the spells gained at level 3, 8, 14, 20
+				name : "From any school",
+				"class" : "druid",
+				times : [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4],
+				level : [1, 4]
+			}
+		},
+		},
+		"subclassfeature3.1" : {
+			name : "Bonded Weapon",
+			source : ["HB", 0]],
+			minlevel : 3,
+			description : "\n   " + "I can bond with up to two weapons by spending a short rest with each" + "\n   " + "I can't be disarmed of a bonded weapon and I can summon one as a bonus action",
+			action : ["bonus action", ""]
+		},
+		"subclassfeature7" : {
+			name : "War Magic",
+			source : ["HB", 0]],
+			minlevel : 7,
+			description : "\n   " + "When I use my action to cast a cantrip, I can make a weapon attack as a bonus action",
+			action : ["bonus action", ""]
+		},
+		"subclassfeature10" : {
+			name : "Nature Strike",
+			source : ["HB", 0],
+			minlevel : 10,
+			description : "\n   " + "A creature hit by my weapon attack has disadv. on the save vs. the next spell I cast" + "\n   " + "This lasts until the end of my next turn"
+		},
+		"subclassfeature15" : {
+			name : "Druidic Charge",
+			source : ["HB", 0],
+			minlevel : 15,
+			description : "\n   " + "When I use Action Surge, I can also teleport up to 30 ft to an empty space I can see" + "\n   " + "I can do so before or after the extra action"
+		},
+		"subclassfeature18" : {
+			name : "Improved War Magic",
+			source : ["HB", 0],
+			minlevel : 18,
+			description : "\n   " + "When I use my action to cast a spell, I can make a weapon attack as a bonus action",
+			action : ["bonus action", ""]
+		},
+		}
+	}
+);
